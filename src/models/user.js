@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
       phone: DataTypes.STRING,
       address: DataTypes.STRING,
       typeId: DataTypes.INTEGER,
-      firstLogin: DataTypes.TINYINT,
+      firstLogin: DataTypes.TINYINT(1),
     },
     {
       sequelize,
