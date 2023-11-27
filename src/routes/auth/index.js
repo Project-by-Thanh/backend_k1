@@ -8,13 +8,11 @@ router.get("/login", LoginMiddleware, AuthController.login);
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/",
+    // successRedirect: "/",
     failureRedirect: "/auth/login",
     failureFlash: true,
   }),
   AuthController.handleLogin
 );
-router.get("/register", AuthController.register);
-router.post("/register", AuthController.handleRegister);
 router.get("/logout", AuthController.logout);
 module.exports = router;

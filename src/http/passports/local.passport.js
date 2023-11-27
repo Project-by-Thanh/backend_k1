@@ -13,6 +13,8 @@ module.exports = new LocalStrategy(
         email,
       },
     });
+    console.log(1222);
+    console.log(email, password);
     if (!user) {
       done(null, false, { message: "Email không chính xác !" });
       return;
