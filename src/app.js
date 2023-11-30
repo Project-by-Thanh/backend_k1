@@ -35,7 +35,7 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(async function (id, done) {
   const user = await model.User.findByPk(id);
-  done(null, user);
+  done(null, user.dataValues);
 });
 
 passport.use("local", localPassport);

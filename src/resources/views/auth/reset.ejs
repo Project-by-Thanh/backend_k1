@@ -1,0 +1,29 @@
+<h1>Reset Password</h1>
+<%- msg.length ? `
+<div class="alert alert-danger">${msg}</div>
+` : "" %>
+<form action="" method="post">
+  <div class="mb-3">
+    <label for="">Mật khẩu đặt lại</label>
+    <input
+      type="password"
+      name="password"
+      class="form-control"
+      placeholder="Nhập Mật Khẩu...."
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="">Nhập lại mật khẩu</label>
+    <input
+      type="password"
+      name="resetpassword"
+      class="form-control"
+      placeholder="Nhập Lại Mật khẩu...."
+      required
+    />
+  </div>
+  <div class="d-grid">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>

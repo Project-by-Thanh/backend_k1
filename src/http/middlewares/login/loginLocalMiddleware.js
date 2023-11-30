@@ -1,6 +1,8 @@
-module.exports = (req, res, next) => {
+module.exports = async (req, res, next) => {
   if (req.user) {
-    res.redirect("/");
+    console.log(484884);
+    return res.redirect("/");
   }
+  console.log(5656565);
   next();
 };
